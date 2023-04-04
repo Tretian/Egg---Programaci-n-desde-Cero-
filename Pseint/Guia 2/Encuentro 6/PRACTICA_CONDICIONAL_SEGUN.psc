@@ -1,0 +1,3 @@
+Algoritmo PRACTICA_CONDICIONAL_SEGUN
+	
+FinAlgoritmo

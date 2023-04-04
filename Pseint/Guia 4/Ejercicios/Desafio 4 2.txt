@@ -1,0 +1,111 @@
+Algoritmo sin_titulo
+	menu()
+FinAlgoritmo
+
+SubProceso menu()
+	
+	Definir op Como entero
+	
+	Escribir "----------- M E N Ú -----------"
+	Escribir "1. Calcular muro de ladrillo"
+	Escribir "2. Calcular viga de hormigón"
+	Escribir "3. Calcular columnas de hormigón"
+	Escribir "4. Calcular contrapisos"
+	Escribir "5. Calcular techo"
+	Escribir "6. Calcular pisos"
+	Escribir "7. Calcular pintura"
+	Escribir "8. Calcular iluminación"
+	Escribir "9. Salir"
+	Escribir "-------------------------------"
+	
+	Leer op
+	
+
+	Segun op
+		1:
+			calcularMuro()
+		2:
+			calcularViga()
+		3:
+			//calcularColumna()
+		4:
+			//calcularContrapisos()
+		5:
+			//calcularTecho()
+		6:
+			//calcularPisos()
+		7:
+			//calcularPintura()
+		8:
+			//calcularIluminacion()
+		9:
+			Escribir "Ha salido del programa"
+		De Otro Modo:
+			Escribir "Opcion no valida"
+		FinSegun
+
+	
+FinSubProceso
+
+SubProceso calcularSuperficie(base,altura,superficie por referencia)
+	superficie=base*altura
+FinSubProceso
+
+SubProceso calcularMuro()
+	
+	Definir espesor, alto, largo, metrosC, cemento, ladrillos, arena Como real
+	
+	Hacer
+		Escribir "El muro sera de 30 o 20cm de espesor?"
+		Leer espesor
+	Mientras Que espesor <> 20 Y espesor <> 30
+	
+	Escribir "Ahora ingrese el largo (m) del muro "
+	Leer largo
+	Escribir "Por ultimo ingrese el alto(m) del muro "
+	leer alto
+	
+	calcularSuperficie(largo,alto,metrosC)
+	
+	si espesor = 30 Entonces
+		
+		cemento= metrosC * 15.2
+		arena= metrosC * 0.115
+		ladrillos= metrosC * 120 
+		
+		Escribir "Necesitaremos " cemento, " kg de cemento, " arena, " m3 de arena y " ladrillos, " ladrillos."
+		
+	SiNo
+		si espesor = 20 Entonces
+			
+			cemento= metrosC * 10.9
+			arena= metrosC * 0.09
+			ladrillos= metrosC * 90
+			
+			Escribir "Necesitaremos " cemento, " kg de cemento, " arena, " m3 de arena y " ladrillos, " ladrillos."
+		FinSi
+	FinSi
+	
+FinSubProceso
+
+SubProceso calcularViga()
+	
+	definir largo,cemento, arena, piedra, hierro8, hierro4 Como Real
+	
+	Escribir "Ingrese el largo de la viga (m)"
+	Leer largo
+	
+	cemento= largo * 9
+	arena= largo * 0.02
+	piedra= largo * 0.02
+	hierro8= largo * 4
+	hierro4= largo * 3
+	
+	Escribir  "Se necesitaran los siguientes materiales: "
+	Escribir cemento "KG de cemento"
+	Escribir arena "mt2 de arena"
+	Escribir piedra "mt2 de piedra"
+	Escribir hierro8 "Mts de hierro del 8"
+	Escribir hierro4 "Mts de hierro del 4"
+	
+FinSubProceso
